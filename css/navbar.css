@@ -1,0 +1,124 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 1rem 2.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+}
+
+.brand-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1a5d3c;
+}
+
+.brand-sub {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d8a5a;
+    background: #e8f3ed;
+    padding: 0.2rem 0.8rem;
+    border-radius: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333333;
+    padding: 0.5rem 0;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #1a5d3c;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 0.7rem;
+    transition: transform 0.2s;
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    color: #333333;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background: #e8f3ed;
+    color: #1a5d3c;
+}
+
+/* Contact Button */
+.contact-btn {
+    background: #007bff;
+    color: #ffffff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+}
+
+.contact-btn:hover {
+    background: #5ba3e6;
+    color: #ffffff;
+}
