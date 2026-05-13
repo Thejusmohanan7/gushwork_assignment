@@ -20,8 +20,9 @@
 }
 
 .hero-main img {
-  width: 100%;
+  width: 60%;
   display: block;
+  margin-left: 8rem;
 }
 
 .hero-nav {
@@ -143,3 +144,38 @@
   cursor: pointer;
   font-size: 14px;
 }
+
+/* ================= TRUSTED SECTION ================= */
+
+.trusted-section {
+    background: #f7f7f7;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.trusted-title {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.trusted-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.trusted-logos img {
+    width: 140px;
+    object-fit: contain;
+    opacity: 0.95;
+    transition: 0.3s ease;
+}
+
+.trusted-logos img:hover {
+    transform: scale(1.05);
+}
+

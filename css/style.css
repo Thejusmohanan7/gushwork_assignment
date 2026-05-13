@@ -1,3 +1,4 @@
+/* ================= GLOBAL RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,4 +12,116 @@ body {
 
 html {
     scroll-behavior: smooth;
+}
+
+/* ================= GLOBAL CONTAINER / RESPONSIVE PADDING ================= */
+
+.section,
+.hero-section,
+.cta-section,
+.footer-section,
+.faq-section,
+.testimonials-section,
+.process-section,
+.resources-section,
+.applications-section,
+.solutions-section,
+.home-section,
+.container {
+    max-width: 1240px;       /* Limit width to prevent distortion on large screens */
+    margin: 0 auto;          /* Center all sections */
+    padding: 100px;          /* Default padding for large screens >=1440px */
+    box-sizing: border-box;
+}
+
+/* ------------------ Responsive Padding ------------------ */
+
+/* Below 1440px */
+@media (max-width: 1440px) {
+    .section,
+    .hero-section,
+    .cta-section,
+    .footer-section,
+    .faq-section,
+    .testimonials-section,
+    .process-section,
+    .resources-section,
+    .applications-section,
+    .solutions-section,
+    .home-section,
+    .container {
+        padding: 100px;
+    }
+}
+
+/* Below 1200px */
+@media (max-width: 1200px) {
+    .section,
+    .hero-section,
+    .cta-section,
+    .footer-section,
+    .faq-section,
+    .testimonials-section,
+    .process-section,
+    .resources-section,
+    .applications-section,
+    .solutions-section,
+    .home-section,
+    .container {
+        padding: 80px;
+    }
+}
+
+/* Below 1080px */
+@media (max-width: 1080px) {
+    .section,
+    .hero-section,
+    .cta-section,
+    .footer-section,
+    .faq-section,
+    .testimonials-section,
+    .process-section,
+    .resources-section,
+    .applications-section,
+    .solutions-section,
+    .home-section,
+    .container {
+        padding: 80px 60px; /* top/bottom 80px, left/right 60px */
+    }
+}
+
+/* Below 800px */
+@media (max-width: 800px) {
+    .section,
+    .hero-section,
+    .cta-section,
+    .footer-section,
+    .faq-section,
+    .testimonials-section,
+    .process-section,
+    .resources-section,
+    .applications-section,
+    .solutions-section,
+    .home-section,
+    .container {
+        padding: 80px 48px; /* top/bottom 80px, left/right 48px */
+    }
+}
+
+/* Below 360px */
+@media (max-width: 360px) {
+    .section,
+    .hero-section,
+    .cta-section,
+    .footer-section,
+    .faq-section,
+    .testimonials-section,
+    .process-section,
+    .resources-section,
+    .applications-section,
+    .solutions-section,
+    .home-section,
+    .container {
+        padding: 48px 16px; /* top/bottom 48px, left/right 16px */
+    }
 }

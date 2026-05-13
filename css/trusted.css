@@ -1,0 +1,154 @@
+/* ================= FOOTER ================= */
+.footer-section {
+  background: #f7f7f7;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Top white bar */
+.footer-top {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px 30px;
+}
+
+.footer-top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-top-content .footer-logo {
+  height: 50px;
+}
+
+.footer-top-content .footer-top-text {
+  font-size: 16px;
+  color: #1a237e;
+}
+
+.footer-top-content .footer-top-text span {
+  font-weight: 600;
+}
+
+/* Columns */
+.footer-columns {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-column h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #666;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #1a237e;
+}
+
+/* Contact Icons */
+.footer-column.contact ul li i {
+  margin-right: 8px;
+  font-size: 14px;
+  color: #1a237e;
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-social a i {
+  font-size: 16px;
+  color: #1a237e;
+  transition: 0.3s;
+}
+
+.footer-social a:hover i {
+  color: #0d1333;
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #666;
+  border-top: 1px solid #dcdcdc;
+  padding-top: 15px;
+}
+
+.footer-bottom ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-bottom ul li a {
+  color: #666;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom ul li a:hover {
+  color: #1a237e;
+}
+
+/* Responsive */
+@media(max-width: 1200px) {
+  .footer-columns {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media(max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-top-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
