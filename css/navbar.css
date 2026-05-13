@@ -1,11 +1,20 @@
-/* Navbar Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #ffffff;
     padding: 1rem 2.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
     left: 0;
@@ -81,7 +90,7 @@
     left: 0;
     background: #ffffff;
     min-width: 180px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     border-radius: 8px;
     padding: 0.5rem 0;
     list-style: none;
@@ -121,4 +130,84 @@
 .contact-btn:hover {
     background: #5ba3e6;
     color: #ffffff;
+}
+
+/* Hamburger & Mobile Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+}
+
+/* Close Button inside mobile menu */
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 300px;
+        height: auto; /* Changed from 100% to auto for minimized height */
+        max-height: 90%; /* optional to limit height */
+        background: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1.5rem; /* reduced top/bottom padding for smaller height */
+        gap: 1.2rem; /* reduce gap between menu items */
+        box-shadow: -2px 0 12px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto; /* scroll if content is too long */
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .close-btn {
+        display: block;
+    }
+
+    /* Dropdown inside mobile */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        box-shadow: none;
+        padding-left: 1rem;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+    }
 }
