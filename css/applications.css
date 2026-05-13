@@ -2,84 +2,66 @@
 
 .applications-section {
     background: #f7f7f7;
-    padding: 110px 0;
-
+    padding: 80px 0;
     border-top: 1px solid #dcdcdc;
     border-bottom: 1px solid #dcdcdc;
-
     overflow: hidden;
 }
 
 /* CONTAINER */
-
 .applications-container {
     width: 100%;
 }
 
 /* ================= TOP ================= */
-
 .applications-top {
-    padding: 0 80px;
-    margin-bottom: 60px;
-
+    padding: 0 60px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 40px;
+    gap: 30px;
 }
 
 .applications-label {
     display: inline-block;
-
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
-
     color: #2f3e9e;
-
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .applications-heading h2 {
-    font-size: 72px;
+    font-size: 48px;
     line-height: 1.1;
     color: #111;
-
     max-width: 850px;
-
-    margin-bottom: 26px;
+    margin-bottom: 18px;
 }
 
 .applications-heading p {
-    font-size: 24px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.5;
     color: #666;
-
     max-width: 900px;
 }
 
 /* ================= BUTTONS ================= */
-
 .applications-buttons {
     display: flex;
-    gap: 18px;
+    gap: 12px;
 }
 
 .slider-btn {
-    width: 82px;
-    height: 82px;
-
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
-
     border: 1px solid #d7d7d7;
-
     background: white;
-
-    font-size: 24px;
+    font-size: 18px;
     color: #444;
-
     cursor: pointer;
-
     transition: 0.3s ease;
 }
 
@@ -90,57 +72,44 @@
 }
 
 /* ================= SLIDER ================= */
-
 .applications-slider {
     overflow: hidden;
-    padding-left: 80px;
+    padding-left: 60px;
 }
 
 .applications-track {
     display: flex;
-    gap: 28px;
-
+    gap: 20px;
     transition: transform 0.6s ease;
 }
 
 /* ================= CARD ================= */
-
 .application-card {
-    min-width: 420px;
-    height: 580px;
-
-    border-radius: 32px;
-
+    min-width: 350px;
+    height: 480px;
+    border-radius: 24px;
     overflow: hidden;
-
     position: relative;
-
     flex-shrink: 0;
-
     cursor: pointer;
-
     transition: transform 0.4s ease;
 }
 
 .application-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 }
 
 /* IMAGE */
-
 .application-card img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
 /* OVERLAY */
-
 .application-overlay {
     position: absolute;
     inset: 0;
-
     background:
         linear-gradient(
             to top,
@@ -148,53 +117,93 @@
             rgba(0,0,0,0.25),
             transparent
         );
-
-    padding: 40px;
-
+    padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
 /* NUMBER */
-
 .application-overlay span {
-    width: 54px;
-    height: 54px;
-
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-
     background: rgba(255,255,255,0.15);
-
-    backdrop-filter: blur(8px);
-
+    backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
     justify-content: center;
-
     color: white;
-
-    font-size: 18px;
-
-    margin-bottom: 24px;
+    font-size: 14px;
+    margin-bottom: 16px;
 }
 
 /* TITLE */
-
 .application-overlay h3 {
-    font-size: 34px;
+    font-size: 24px;
     line-height: 1.3;
-
     color: white;
-
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 /* TEXT */
-
 .application-overlay p {
-    font-size: 18px;
-    line-height: 1.8;
-
+    font-size: 14px;
+    line-height: 1.6;
     color: rgba(255,255,255,0.9);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1600px) { .applications-section { padding: 80px; } }
+@media (max-width: 1440px) { .applications-section { padding: 80px; } }
+@media (max-width: 1200px) { .applications-section { padding: 60px; } }
+@media (max-width: 1080px) { .applications-section { padding: 60px 48px; } }
+
+/* MOBILE VIEW - STACKED CARDS */
+@media (max-width: 800px) {
+    .applications-section { padding: 60px 32px; }
+
+    /* Stack top section */
+    .applications-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .applications-heading h2 { font-size: 32px; }
+    .applications-heading p { font-size: 14px; }
+
+    /* Hide slider buttons */
+    .applications-buttons { display: none; }
+
+    /* Make cards stacked vertically */
+    .applications-slider { padding-left: 0; }
+    .applications-track {
+        flex-direction: column;
+        gap: 20px;
+        transform: none !important; /* disable slider translation */
+    }
+
+    .application-card {
+        min-width: 100%; /* full width */
+        height: auto; /* height adjusts to image */
+    }
+
+    .application-card img { height: auto; }
+
+    .application-overlay { padding: 16px; }
+    .application-overlay span { width: 36px; height: 36px; font-size: 12px; margin-bottom: 12px; }
+    .application-overlay h3 { font-size: 20px; margin-bottom: 8px; }
+    .application-overlay p { font-size: 12px; line-height: 1.4; }
+}
+
+@media (max-width: 360px) {
+    .applications-section { padding: 48px 16px; }
+    .applications-track { gap: 12px; }
+    .application-card { min-width: 100%; height: auto; }
+    .application-overlay { padding: 12px; }
+    .application-overlay span { width: 32px; height: 32px; font-size: 10px; margin-bottom: 8px; }
+    .application-overlay h3 { font-size: 18px; margin-bottom: 6px; }
+    .application-overlay p { font-size: 10px; line-height: 1.3; }
 }
