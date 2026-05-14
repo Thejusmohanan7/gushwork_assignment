@@ -41,7 +41,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 50px;
 }
 
 .footer-column h5 {
@@ -59,6 +59,7 @@
 .footer-column ul li {
   font-size: 13px;
   margin-bottom: 8px;
+  padding: 3px;
 }
 
 .footer-column ul li a {
