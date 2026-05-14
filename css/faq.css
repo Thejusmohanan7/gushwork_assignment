@@ -125,10 +125,11 @@
 /* CTA CONTENT */
 
 .faq-cta-content h3 {
-    font-size: 28px; /* smaller */
+    font-size: 30px; /* smaller */
     margin-bottom: 12px;
     color: #111;
     line-height: 1.2;
+    font-weight: 450;
 }
 
 .faq-cta-content p {
@@ -146,7 +147,7 @@
 
 .faq-cta-form input {
     width: 100%;
-    height: 50px; /* smaller height */
+    height: 40px; /* smaller height */
     border-radius: 10px;
     border: 1px solid #d0d0d0;
     padding: 0 16px;
@@ -162,7 +163,7 @@
 
 .faq-cta-form button {
     width: 100%;
-    height: 50px; /* smaller height */
+    height: 40px; /* smaller height */
     border: none;
     border-radius: 10px;
     background: #2f3e9e;
