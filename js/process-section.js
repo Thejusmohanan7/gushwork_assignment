@@ -20,10 +20,13 @@ const processBadge = document.querySelector(".process-badge");
 function updateProcess(index) {
     const data = processData[index];
     const textContainer = document.querySelector(".process-text");
+
+    // fade out
     textContainer.classList.add("fade");
     processImage.style.opacity = "0";
 
     setTimeout(() => {
+        // update content
         processTitle.innerText = data.title;
         processDescription.innerText = data.description;
 
@@ -32,16 +35,19 @@ function updateProcess(index) {
 
         processImage.src = data.image;
 
+        // update active tab
         processTabs.forEach(tab => tab.classList.remove("active"));
         processTabs[index].classList.add("active");
 
-        // Update badge text
+        // update badge for mobile
         if (processBadge) processBadge.innerText = `Step ${index+1}/8: ${data.tab}`;
 
         currentProcess = index;
+
+        // fade in
         textContainer.classList.remove("fade");
         processImage.style.opacity = "1";
-    }, 300);
+    }, 200); // slightly faster fade
 }
 
 // TAB CLICK
@@ -58,4 +64,9 @@ document.getElementById("processPrev").addEventListener("click", () => {
     let prev = currentProcess - 1;
     if (prev < 0) prev = processData.length - 1;
     updateProcess(prev);
+});
+
+// ⚡ Initialize first slide on page load
+document.addEventListener("DOMContentLoaded", () => {
+    updateProcess(0);
 });
