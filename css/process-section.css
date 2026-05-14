@@ -77,7 +77,7 @@
 .applications-slider {
     overflow: hidden;
     position: relative; /* for slider buttons */
-    padding-left: 0; /* align to container */
+    padding-left: 0;
 }
 
 .applications-track {
@@ -93,7 +93,7 @@
     height: 480px;
     border-radius: 24px;
     overflow: hidden;
-    position: relative;
+    position: relative; /* badge absolute anchors here */
     flex-shrink: 0;
     cursor: pointer;
     transition: transform 0.4s ease;
@@ -127,7 +127,7 @@
     justify-content: flex-end;
 }
 
-/* NUMBER */
+/* NUMBER BADGE */
 .application-overlay span {
     width: 42px;
     height: 42px;
@@ -158,10 +158,18 @@
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 1600px) { .applications-section { padding: 80px; } }
-@media (max-width: 1440px) { .applications-section { padding: 80px; } }
-@media (max-width: 1200px) { .applications-section { padding: 60px; } }
-@media (max-width: 1080px) { .applications-section { padding: 60px 48px; } }
+@media (max-width: 1600px) { 
+    .applications-section { padding: 80px; } 
+}
+@media (max-width: 1440px) { 
+    .applications-section { padding: 80px; } 
+}
+@media (max-width: 1200px) { 
+    .applications-section { padding: 60px; } 
+}
+@media (max-width: 1080px) { 
+    .applications-section { padding: 60px 48px; } 
+}
 
 /* MOBILE VIEW - STACKED CARDS */
 @media (max-width: 800px) {
@@ -192,12 +200,29 @@
     .application-card {
         min-width: 100%; /* full width */
         height: auto; /* height adjusts to image */
+        position: relative; /* anchor badge */
     }
 
-    .application-card img { height: auto; }
+    .application-card img { height: auto; display: block; }
 
-    .application-overlay { padding: 16px; }
-    .application-overlay span { width: 36px; height: 36px; font-size: 12px; margin-bottom: 12px; }
+    .application-overlay {
+        padding: 16px;
+        justify-content: flex-end;
+    }
+
+    /* FIXED BADGE POSITION */
+    .application-overlay span {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+        margin: 0;
+        z-index: 10;
+        flex-shrink: 0;
+    }
+
     .application-overlay h3 { font-size: 20px; margin-bottom: 8px; }
     .application-overlay p { font-size: 12px; line-height: 1.4; }
 }
@@ -207,7 +232,13 @@
     .applications-track { gap: 12px; }
     .application-card { min-width: 100%; height: auto; }
     .application-overlay { padding: 12px; }
-    .application-overlay span { width: 32px; height: 32px; font-size: 10px; margin-bottom: 8px; }
+    .application-overlay span {
+        top: 10px;
+        left: 10px;
+        width: 32px;
+        height: 32px;
+        font-size: 10px;
+    }
     .application-overlay h3 { font-size: 18px; margin-bottom: 6px; }
     .application-overlay p { font-size: 10px; line-height: 1.3; }
 }

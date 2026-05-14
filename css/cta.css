@@ -1,21 +1,21 @@
 /* ================= CTA SECTION ================= */
 
 .cta-section {
-    padding: 90px 60px 120px;
+    padding: 70px 40px 90px;
     border-top: 1px solid #dcdcdc;
     border-bottom: 1px solid #dcdcdc;
     background: #f7f7f7;
 }
 
 .cta-wrapper {
-    max-width: 1450px;
+    max-width: 1240px; /* limit max width */
     margin: auto;
     background: #2f3e9e;
-    border-radius: 42px;
-    padding: 70px 70px;
+    border-radius: 32px;
+    padding: 50px 50px;
     display: flex;
     justify-content: space-between;
-    gap: 70px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -26,34 +26,34 @@
 }
 
 .cta-left h2 {
-    font-size: 58px;
+    font-size: 40px;
     line-height: 1.15;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 28px;
-    max-width: 700px;
+    margin-bottom: 20px;
+    max-width: 600px;
 }
 
 .cta-left p {
-    font-size: 22px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.6;
     color: rgba(255,255,255,0.85);
-    margin-bottom: 40px;
-    max-width: 760px;
+    margin-bottom: 30px;
+    max-width: 700px;
 }
 
 .cta-divider {
     width: 100%;
     height: 1px;
     background: rgba(255,255,255,0.2);
-    margin-bottom: 34px;
+    margin-bottom: 24px;
 }
 
 .cta-contact {
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.6;
     color: rgba(255,255,255,0.82);
-    max-width: 760px;
+    max-width: 700px;
 }
 
 .cta-contact strong {
@@ -69,16 +69,16 @@
 /* RIGHT FORM */
 
 .cta-form-box {
-    width: 500px;
+    width: 400px;
     background: #ececec;
-    border-radius: 34px;
-    padding: 38px;
+    border-radius: 28px;
+    padding: 28px;
     flex-shrink: 0;
 }
 
 .cta-form-box h3 {
-    font-size: 30px;
-    margin-bottom: 28px;
+    font-size: 24px;
+    margin-bottom: 20px;
     color: #111;
     font-weight: 600;
 }
@@ -86,42 +86,42 @@
 .cta-form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 12px;
 }
 
 .cta-form input,
 .cta-form select {
     width: 100%;
-    height: 64px;
-    border-radius: 16px;
+    height: 50px;
+    border-radius: 14px;
     border: 1px solid #d8d8d8;
-    padding: 0 22px;
-    font-size: 17px;
+    padding: 0 18px;
+    font-size: 14px;
     background: white;
     outline: none;
 }
 
 .phone-row {
     display: flex;
-    gap: 14px;
+    gap: 10px;
 }
 
 .phone-row select {
-    width: 110px;
+    width: 100px;
     flex-shrink: 0;
 }
 
 .cta-form button {
-    height: 68px;
+    height: 50px;
     border: none;
-    border-radius: 16px;
+    border-radius: 14px;
     background: #1d1f27;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     cursor: pointer;
     transition: 0.3s ease;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .cta-form button:hover {
@@ -132,11 +132,11 @@
 /* ================= RESPONSIVE ================= */
 
 @media(max-width: 1200px) {
-
     .cta-wrapper {
         flex-direction: column;
         align-items: stretch;
-        padding: 55px;
+        padding: 40px;
+        gap: 30px;
     }
 
     .cta-form-box {
@@ -144,58 +144,57 @@
     }
 
     .cta-left h2 {
-        font-size: 46px;
+        font-size: 32px;
     }
 
     .cta-left p {
-        font-size: 19px;
+        font-size: 15px;
     }
 }
 
 @media(max-width: 768px) {
-
     .cta-section {
-        padding: 70px 24px;
+        padding: 50px 20px;
     }
 
     .cta-wrapper {
-        padding: 36px 28px;
-        border-radius: 28px;
-        gap: 40px;
+        padding: 24px 20px;
+        border-radius: 20px;
+        gap: 24px;
     }
 
     .cta-left h2 {
-        font-size: 34px;
+        font-size: 26px;
     }
 
     .cta-left p {
-        font-size: 16px;
-        margin-bottom: 28px;
+        font-size: 14px;
+        margin-bottom: 20px;
     }
 
     .cta-contact {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .cta-form-box {
-        padding: 28px 22px;
-        border-radius: 24px;
+        padding: 20px 16px;
+        border-radius: 18px;
     }
 
     .cta-form-box h3 {
-        font-size: 24px;
-        margin-bottom: 22px;
+        font-size: 20px;
+        margin-bottom: 16px;
     }
 
     .cta-form input,
     .cta-form select {
-        height: 56px;
-        font-size: 15px;
+        height: 45px;
+        font-size: 13px;
     }
 
     .cta-form button {
-        height: 58px;
-        font-size: 16px;
+        height: 45px;
+        font-size: 13px;
     }
 
     .phone-row {
@@ -204,5 +203,44 @@
 
     .phone-row select {
         width: 100%;
+    }
+}
+
+@media(max-width: 360px) {
+    .cta-section {
+        padding: 40px 12px;
+    }
+
+    .cta-wrapper {
+        padding: 16px 12px;
+    }
+
+    .cta-left h2 {
+        font-size: 22px;
+    }
+
+    .cta-left p {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    .cta-contact {
+        font-size: 11px;
+    }
+
+    .cta-form-box h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .cta-form input,
+    .cta-form select {
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .cta-form button {
+        height: 40px;
+        font-size: 12px;
     }
 }
