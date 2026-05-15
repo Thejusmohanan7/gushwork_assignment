@@ -18,14 +18,8 @@ html {
 
 .section,
 .hero-section,
-.footer-section,
-.faq-section,
+
 .testimonials-section,
-.process-section,
-.resources-section,
-.applications-section,
-.solutions-section,
-.home-section,
 .container {
     max-width: 1240px;
     margin: 0 auto;
