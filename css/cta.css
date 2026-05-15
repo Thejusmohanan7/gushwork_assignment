@@ -4,7 +4,7 @@
     padding: 70px 40px 90px;
     border-top: 1px solid #dcdcdc;
     border-bottom: 1px solid #dcdcdc;
-    background: #f7f7f7;
+    background: url("../assets/images/bg2.png") repeat;
 }
 
 .cta-wrapper {
