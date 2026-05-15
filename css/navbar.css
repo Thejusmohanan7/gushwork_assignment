@@ -28,19 +28,9 @@ body {
     gap: 0.8rem;
 }
 
-.brand-name {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: #1a5d3c;
-}
-
-.brand-sub {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #2d8a5a;
-    background: #e8f3ed;
-    padding: 0.2rem 0.8rem;
-    border-radius: 30px;
+.brand-logo {
+    width: 120px;
+    height: auto;
 }
 
 .nav-links {
@@ -59,9 +49,6 @@ body {
     transition: color 0.2s;
 }
 
-.nav-link:hover {
-    color: #1a5d3c;
-}
 
 /* Dropdown Styles */
 .dropdown {
