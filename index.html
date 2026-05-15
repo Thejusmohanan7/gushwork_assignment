@@ -233,15 +233,18 @@
             to quality and engineering excellence.
         </p>
 
+        <!-- TABLE -->
         <div class="specs-table-wrapper">
 
             <table class="specs-table">
 
                 <thead>
+
                     <tr>
                         <th>PARAMETER</th>
                         <th>SPECIFICATION</th>
                     </tr>
+
                 </thead>
 
                 <tbody>
@@ -302,11 +305,18 @@
 
         </div>
 
+        <!-- DOWNLOAD BUTTON -->
         <div class="specs-btn-wrap">
 
-            <button class="specs-btn">
+            <button
+                class="specs-btn"
+                id="openBrochureModal"
+            >
+
                 <i class="fa-solid fa-download"></i>
+
                 Download Full Technical Datasheet
+
             </button>
 
         </div>
@@ -314,6 +324,78 @@
     </div>
 
 </section>
+
+<!-- ================= MODAL ================= -->
+
+<div class="brochure-modal" id="brochureModal">
+
+    <!-- OVERLAY -->
+    <div class="brochure-overlay"></div>
+
+    <!-- MODAL BOX -->
+    <div class="brochure-box">
+
+        <!-- HEADER -->
+        <div class="brochure-header">
+
+            <h3>
+                Let us email the entire catalogue to you
+            </h3>
+
+            <button
+                class="close-modal"
+                id="closeBrochureModal"
+            >
+                ✕
+            </button>
+
+        </div>
+
+        <!-- BODY -->
+        <div class="brochure-body">
+
+            <!-- EMAIL -->
+            <div class="form-group">
+
+                <label>
+                    Your Email <span>*</span>
+                </label>
+
+                <input
+                    type="email"
+                    placeholder="example@gmail.com"
+                />
+
+            </div>
+
+            <!-- PHONE -->
+            <div class="form-group">
+
+                <label>
+                    Your Contact (Optional)
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="+91-0000000000"
+                />
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="brochure-footer">
+
+            <button class="download-btn">
+                Download Brochure
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 <!-- ================= FEATURES SECTION ================= -->
 
@@ -1287,5 +1369,6 @@
     <script src="js/process-section.js"></script>
     <script src="js/testimonials.js"></script>
     <script src="js/solutions.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>
