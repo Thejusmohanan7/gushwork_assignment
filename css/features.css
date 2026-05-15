@@ -1,20 +1,20 @@
 /* ================= FEATURES SECTION ================= */
 
 .features-section {
-    padding: 100px 60px; /* reduced padding */
+    padding: 100px 60px;
 }
 
 .features-container {
-    max-width: 1140px; /* smaller max width */
+    max-width: 1140px;
     margin: auto;
 }
 
 .features-header {
-    margin-bottom: 50px; /* reduced margin */
+    margin-bottom: 50px;
 }
 
 .features-header h2 {
-    font-size: 36px; /* smaller heading */
+    font-size: 36px;
     line-height: 1.1;
     color: #111;
     margin-bottom: 20px;
@@ -23,7 +23,7 @@
 }
 
 .features-header p {
-    font-size: 16px; /* smaller text */
+    font-size: 16px;
     line-height: 1.5;
     color: #666;
     max-width: 980px;
@@ -39,9 +39,10 @@
 /* CARD */
 .feature-card {
     border: 1px solid #d5d5d5;
-    border-radius: 20px; /* smaller radius */
-    padding: 20px; /* smaller padding */
+    border-radius: 20px;
+    padding: 20px;
     transition: 0.3s ease;
+    background: white;
 }
 
 .feature-card:hover {
@@ -53,19 +54,19 @@
 }
 
 .feature-icon i {
-    font-size: 28px; /* smaller icon */
+    font-size: 28px;
     color: #283593;
 }
 
 .feature-card h3 {
-    font-size: 18px; /* smaller heading */
+    font-size: 18px;
     margin-bottom: 12px;
     color: #111;
     line-height: 1.3;
 }
 
 .feature-card p {
-    font-size: 14px; /* smaller text */
+    font-size: 14px;
     line-height: 1.4;
     color: #555;
 }
@@ -74,16 +75,16 @@
 .features-btn-wrap {
     display: flex;
     justify-content: center;
-    margin-top: 40px; /* reduced margin */
+    margin-top: 40px;
 }
 
 .features-btn {
     background: #283593;
     color: white;
     border: none;
-    padding: 14px 28px; /* smaller padding */
+    padding: 14px 28px;
     border-radius: 16px;
-    font-size: 18px; /* smaller font */
+    font-size: 18px;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -92,47 +93,343 @@
     transform: translateY(-2px);
 }
 
+/* ================= QUOTE MODAL ================= */
+
+.quote-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+}
+
+/* ACTIVE */
+.quote-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* BACKDROP */
+.quote-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.28);
+
+    backdrop-filter: blur(10px);
+}
+
+/* MODAL BOX */
+.quote-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+
+    background: #fff;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    z-index: 2;
+
+    animation: quoteFade 0.35s ease;
+}
+
+/* HEADER */
+.quote-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 18px;
+
+    border-bottom: 1px solid #ececec;
+}
+
+.quote-header h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #111;
+}
+
+/* CLOSE BUTTON */
+.close-quote-modal {
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    color: #666;
+
+    transition: 0.3s ease;
+}
+
+.close-quote-modal:hover {
+    background: #f3f3f3;
+}
+
+/* BODY */
+.quote-body {
+    padding: 18px;
+}
+
+/* FORM */
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quote-form input,
+.quote-form select {
+    width: 100%;
+    height: 42px;
+
+    border: 1px solid #dcdcdc;
+
+    border-radius: 8px;
+
+    padding: 0 14px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+.quote-form input:focus,
+.quote-form select:focus {
+    border-color: #283593;
+}
+
+/* PHONE ROW */
+.quote-phone-row {
+    display: flex;
+}
+
+.quote-phone-row select {
+    width: 80px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.quote-phone-row input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* BUTTON */
+.quote-btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.quote-submit-btn {
+    background: #283593;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.quote-submit-btn:hover {
+    opacity: 0.92;
+}
+
+/* ANIMATION */
+@keyframes quoteFade {
+
+    from {
+        transform: translateY(20px) scale(0.96);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 1200px) {
-    .features-section { padding: 80px 40px; }
-    .features-header h2 { font-size: 32px; }
-    .features-header p { font-size: 14px; }
 
-    .features-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-    .feature-card { padding: 16px; }
-    .feature-icon i { font-size: 24px; }
-    .feature-card h3 { font-size: 16px; margin-bottom: 10px; }
-    .feature-card p { font-size: 13px; line-height: 1.3; }
+    .features-section {
+        padding: 80px 40px;
+    }
 
-    .features-btn { padding: 12px 24px; font-size: 16px; }
+    .features-header h2 {
+        font-size: 32px;
+    }
+
+    .features-header p {
+        font-size: 14px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 16px;
+    }
+
+    .feature-icon i {
+        font-size: 24px;
+    }
+
+    .feature-card h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .feature-card p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .features-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 768px) {
-    .features-section { padding: 60px 24px; }
-    .features-header h2 { font-size: 28px; }
-    .features-header p { font-size: 12px; }
 
-    /* Stack cards one by one */
-    .features-grid { grid-template-columns: 1fr; gap: 16px; }
-    .feature-card { padding: 14px; }
-    .feature-icon i { font-size: 22px; }
-    .feature-card h3 { font-size: 15px; margin-bottom: 8px; }
-    .feature-card p { font-size: 12px; line-height: 1.2; }
+    .features-section {
+        padding: 60px 24px;
+    }
 
-    .features-btn { padding: 10px 20px; font-size: 14px; }
+    .features-header h2 {
+        font-size: 28px;
+    }
+
+    .features-header p {
+        font-size: 12px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 14px;
+    }
+
+    .feature-icon i {
+        font-size: 22px;
+    }
+
+    .feature-card h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .feature-card p {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .features-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* MODAL */
+    .quote-box {
+        width: calc(100% - 32px);
+    }
+
+    .quote-phone-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .quote-phone-row select {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .quote-phone-row input {
+        border-radius: 8px;
+    }
+
+    .quote-submit-btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 360px) {
-    .features-section { padding: 48px 16px; }
-    .features-header h2 { font-size: 24px; }
-    .features-header p { font-size: 11px; }
 
-    .features-grid { grid-template-columns: 1fr; gap: 12px; }
-    .feature-card { padding: 12px; }
-    .feature-icon i { font-size: 20px; }
-    .feature-card h3 { font-size: 14px; margin-bottom: 6px; }
-    .feature-card p { font-size: 11px; line-height: 1.1; }
+    .features-section {
+        padding: 48px 16px;
+    }
 
-    .features-btn { padding: 8px 16px; font-size: 12px; }
+    .features-header h2 {
+        font-size: 24px;
+    }
+
+    .features-header p {
+        font-size: 11px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .feature-card {
+        padding: 12px;
+    }
+
+    .feature-icon i {
+        font-size: 20px;
+    }
+
+    .feature-card h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .feature-card p {
+        font-size: 11px;
+        line-height: 1.1;
+    }
+
+    .features-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
 }
